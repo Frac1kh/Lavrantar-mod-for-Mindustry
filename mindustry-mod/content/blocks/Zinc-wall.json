@@ -1,0 +1,13 @@
+{
+    "name": "Zinc wall",
+    "description": "tushtututututush",
+    "type": "wall",
+    "health": 1620,
+    "size": 2,
+    "requirements": [
+     { "item": "zinc", "amount": 20 }
+    ],
+    "category": "defense",
+    "research": "copper-wall"
+   }
+   

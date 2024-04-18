@@ -1,0 +1,157 @@
+type: ItemTurret
+health: 200
+reload: 170
+rotateSpeed: 2
+recoil: 3
+shootCone: 30
+range: 460
+size: 2
+targetAir: true
+targetGround: true
+shootSound: bang
+ammoPerShot: 3
+shootWarmupSpeed: 0.01
+linearWarmup: true
+cooldownTime: 60
+minWarmup: 0.9
+liquidCapacity: 30
+shootEffect: shootBig
+smokeEffect: shootBigSmoke
+
+shoot: {
+  type: ShootBarrel
+  barrels: [
+    0, 0, 0,
+  ]
+  shots: 3
+  shotDelay: 20
+}
+ammoTypes: {
+  zinc: {
+    collidesGround: true
+    damage: 40
+    speed: 2
+    lifetime: 180
+    homingPower: 0.5
+    homingRange: 120
+    homingDelay: 0
+    sprite: missile-large
+    width: 10
+    height: 15
+    trailInterval: 2
+    trailEffect: {
+      type: WaveEffect
+      lifetime: 25
+      sizeFrom: 7
+      sizeTo: 2
+      strokeFrom: 2
+      strokeTo: 0
+      colorFrom: ffd2ae
+      colorTo: 9c855c
+    }
+    despawnHit: true
+    fragBullets: 45
+    fragBullet: {
+      type: BulletType
+      collidesGround: true
+      speed: 2
+      damage: 2
+      lifetime: 45
+      collides: false
+      hittable: false
+      absorbable: false
+      despawnHit: true
+      fragBullets: 1
+      fragBullet: {
+        type: ExplosionBulletType
+        collidesGround: true
+        killShooter: false
+        splashDamage: 70
+        splashDamageRadius: 10
+        hitEffect: [
+          {
+            type: WaveEffect
+            lifetime: 35
+            sizeFrom: 1
+            sizeTo: 20
+            strokeFrom: 4
+            strokeTo: 0
+            colorTo: ffd2ae
+            interp: pow2Out
+          }
+          {
+            line: true
+            lifetime: 35
+            particles: 22
+            length: 50
+            baseLength: 10
+            strokeFrom: 0
+            strokeTo: 3
+            lenFrom: 8
+            lenTo: 0
+            colorFrom: ffd2ae
+            colorTo: ffd2ae
+            interp: pow2Out
+            sizeInterp: linear
+          }
+          {
+            lifetime: 70
+            particles: 45
+            length: 70
+            sizeFrom: 12
+            sizeTo: 0
+            colorFrom: 787878
+            colorTo: 787878
+            interp: pow2Out
+            sizeInterp: pow2In
+          }
+          {
+            lifetime: 60
+            particles: 45
+            length: 45
+            sizeFrom: 6
+            sizeTo: 0
+            colorFrom: 787878
+            colorTo: 787878
+            interp: pow2Out
+            sizeInterp: pow2In
+          }
+        ]
+      }
+    }
+    hitEffect: [
+      {
+        type: WaveEffect
+        lifetime: 45
+        sizeFrom: 20
+        sizeTo: 2
+        strokeFrom: 0
+        strokeTo: 4
+        colorTo: ffd2ae
+        interp: pow2Out
+      }
+      {
+        line: true
+        lifetime: 45
+        particles: 22
+        length: -80
+        baseLength: 100
+        strokeFrom: 3
+        strokeTo: 0
+        lenFrom: 0
+        lenTo: 8
+        colorFrom: ffd2ae
+        colorTo: ffd2ae
+        interp: pow2Out
+        sizeInterp: linear
+      }
+    ]
+  }
+}
+canOverdrive: false
+category: turret
+research: swarmer
+requirements: [
+  zinc/35
+  copper/25
+]

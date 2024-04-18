@@ -1,0 +1,11 @@
+{
+    "type": "liquid",
+    "name": "carelit",
+    "description": "nononono",
+    "color": "409C6E",
+    "flammability": 0,
+    "temperature": 0.2,
+    "heatCapacity": 1,
+    "viscosity": 0.1,
+    "explosiveness": 0
+   }
