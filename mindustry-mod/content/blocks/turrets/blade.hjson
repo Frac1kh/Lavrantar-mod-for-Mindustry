@@ -1,0 +1,36 @@
+type: PowerTurret
+size: 3
+health: 1600
+range: 240
+rotateSpeed: 3.8
+reload: 20
+shoot: {
+  type: ShootBarrel
+  shots: 5
+  shotDelay: 3
+   barrels: [
+    8, 0, 0, 
+    0, 0, 0, 
+    -8, 0, 0
+    16, 0, 0
+    -16, 0, 0
+  ]
+}
+consumes: {
+  power: 15
+} 
+recoil: 3
+shootSound: laser
+shootType: {
+  type: LaserBulletType
+  length: 280
+  width: 40
+  damage: 15
+}
+category: turret
+requirements: [
+  lead/450
+  graphite/350
+  silicon/300
+  plastanium/150
+]

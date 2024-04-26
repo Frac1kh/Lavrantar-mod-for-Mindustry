@@ -1,0 +1,12 @@
+{
+    "type": "material",
+    "name": "Chronsium",
+    "description": "Nah, bro123",
+    "color": "7488a8",
+    "explosiveness": 0.4,
+    "flammability": 0,
+    "radioactivity": 0.1,
+    "hardness": 1,
+    "cost": 1.5,
+    "alwaysUnlocked": false
+   }
